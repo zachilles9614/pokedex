@@ -29,7 +29,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="61"/>
                                 <color key="backgroundColor" red="1" green="0.30799271030619635" blue="0.31992220775439495" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
-                            <searchBar contentMode="redraw" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cx2-Ng-qGE">
+                            <searchBar contentMode="redraw" ambiguous="YES" searchBarStyle="minimal" placeholder="Search Pokedex" translatesAutoresizingMaskIntoConstraints="NO" id="cx2-Ng-qGE">
                                 <rect key="frame" x="0.0" y="61" width="414" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
@@ -43,7 +43,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="2rA-wp-70a">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="2rA-wp-70a" customClass="PokeCell" customModule="Pokedex" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -71,6 +71,10 @@
                                             <constraint firstAttribute="trailing" secondItem="bLc-u2-i3j" secondAttribute="trailing" id="gQv-vB-xtU"/>
                                         </constraints>
                                         <size key="customSize" width="100" height="100"/>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="bLc-u2-i3j" id="lT0-Yc-PP9"/>
+                                            <outlet property="thumbImage" destination="gw6-qv-Q3N" id="l75-Ww-Y5F"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -80,14 +84,13 @@
                             <constraint firstItem="cx2-Ng-qGE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="63x-po-mMC"/>
                             <constraint firstItem="gbV-SC-VC1" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="20" id="6Bn-4h-mrE"/>
                             <constraint firstItem="gbV-SC-VC1" firstAttribute="top" secondItem="cx2-Ng-qGE" secondAttribute="bottom" constant="20" id="Kmq-TB-qlO"/>
-                            <constraint firstItem="fVy-Ax-dE6" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="OLd-Zw-3wX"/>
+                            <constraint firstItem="fVy-Ax-dE6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="RDV-rQ-fzh"/>
+                            <constraint firstItem="hfy-LZ-91p" firstAttribute="top" secondItem="fVy-Ax-dE6" secondAttribute="bottom" id="TSz-LM-UTl"/>
                             <constraint firstItem="gbV-SC-VC1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Ukr-e5-LG2"/>
                             <constraint firstItem="gbV-SC-VC1" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="20" id="VPL-g0-Dfw"/>
-                            <constraint firstItem="hfy-LZ-91p" firstAttribute="top" secondItem="fVy-Ax-dE6" secondAttribute="bottom" id="WdY-rp-WOy"/>
-                            <constraint firstItem="fVy-Ax-dE6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="eFH-GS-73w"/>
-                            <constraint firstItem="cx2-Ng-qGE" firstAttribute="top" secondItem="fVy-Ax-dE6" secondAttribute="bottom" id="g7s-TQ-Of2"/>
-                            <constraint firstItem="fVy-Ax-dE6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tCs-n7-LgW"/>
+                            <constraint firstItem="fVy-Ax-dE6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ljQ-Yv-FGs"/>
                             <constraint firstItem="cx2-Ng-qGE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wTW-NE-x9Z"/>
+                            <constraint firstItem="fVy-Ax-dE6" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="zXr-tV-JD3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
